@@ -2,12 +2,13 @@ import java.util.Scanner;
 
 public class UkuranFile {
 
+    // SATU_KB dipakai sebagai konstanta pembagi supaya hasil KB/MB/GB berupa desimal, bukan dibulatkan ke bawah
     public static final double SATU_KB = 1024.0;
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Nama file   : ");
+        System.out.print("Nama file    : ");
         String namaFile = input.nextLine();
 
         System.out.print("Ukuran (byte): ");
@@ -18,7 +19,6 @@ public class UkuranFile {
         double ukuranGB = ukuranMB / SATU_KB;
 
         int mbDibulatkan = (int) ukuranMB;
-
         double selisihPembulatan = ukuranMB - mbDibulatkan;
 
         System.out.println();
